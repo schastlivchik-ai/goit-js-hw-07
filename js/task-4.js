@@ -6,6 +6,7 @@ form.addEventListener('submit', (event) => {
     if (Array.from(inputFields).some(input => input.value.trim() === '')) {
     event.preventDefault();
     alert('All form fields must be filled in');
+    return
   } else {
     inputFields.forEach((input) => {
         userForm[input.name] = input.value.trim()
